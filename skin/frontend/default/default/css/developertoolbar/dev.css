@@ -1,0 +1,54 @@
+.developertoolbar {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;	
+    width: 100%;
+    text-align: center;
+    background: #0A263C;
+    border-top: 1px solid #415966;	
+    z-index: 10000;
+}
+.developertoolbar a {
+    color: #FF822F;
+    font-weight:bold;
+    font-size:11px;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;	
+}
+
+.developertoolbar > a {
+    float: left;
+    display: none;
+}
+.developertoolbar a:hover {
+    color: #A7C6DD;
+}
+
+.developertoolbar .bar_name {
+    color: #D96708;
+    font-size: 10px;
+    font-weight:bold;
+    cursor:pointer;
+    padding-left: 3px;
+}
+
+.developertoolbar .hide_me {
+    color: #D96708;
+    font-size: 9px;
+    font-weight:bold;	
+    padding-right: 3px;	
+}
+
+.developertoolbar .seperate {
+    width: 1px;
+    border-right: 1px solid #415966;
+}
+
+.developertoolbar .disabled {
+    color: #666;
+}
+
+.developertoolbar .action-link {
+    color:#FF0000;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+-->
+<layout version="0.1.0">
+
+
+<!--
+Customer account pages, rendered for all tabs in dashboard
+-->
+
+       
+	
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>default</type>
+                <block>rewards/checkout_cart_item_renderer</block>
+                <template>rewardsonly/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>simple</type>
+                <block>rewards/checkout_cart_item_renderer</block>
+                <template>rewardsonly/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>grouped</type>
+                <block>rewards/checkout_cart_item_renderer_grouped</block>
+                <template>rewardsonly/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>configurable</type>
+                <block>rewards/checkout_cart_item_renderer_configurable</block>
+                <template>rewardsonly/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>bundle</type>
+                <block>rewards/checkout_cart_item_renderer_bundle</block>
+                <template>rewardsonly/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>downloadable</type>
+                <block>rewards/checkout_cart_item_renderer_downloadable</block>
+                <template>rewardsonly/checkout/cart/item/downloadable.phtml</template>
+            </action>
+        </reference>
+    </checkout_cart_index>
+	
+</layout>

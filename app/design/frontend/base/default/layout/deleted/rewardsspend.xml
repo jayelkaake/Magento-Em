@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WDCA - Sweet Tooth
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the WDCA SWEET TOOTH POINTS AND REWARDS 
+ * License, which extends the Open Software License (OSL 3.0).
+ * The Sweet Tooth License is available at this URL: 
+ *      http://www.wdca.ca/solutions_page_sweettooth/Sweet_Tooth_License.php
+ * The Open Software License is available at this URL: 
+ *      http://opensource.org/licenses/osl-3.0.php
+ * 
+ * DISCLAIMER
+ * 
+ * By adding to, editing, or in any way modifying this code, WDCA is 
+ * not held liable for any inconsistencies or abnormalities in the 
+ * behaviour of this code. 
+ * By adding to, editing, or in any way modifying this code, the Licensee
+ * terminates any agreement of support offered by WDCA, outlined in the 
+ * provided Sweet Tooth License. 
+ * Upon discovery of modified code in the process of support, the Licensee 
+ * is still held accountable for any and all billable time WDCA spent 
+ * during the support process.
+ * WDCA does not guarantee compatibility with any other framework extension. 
+ * WDCA is not responsbile for any inconsistencies or abnormalities in the
+ * behaviour of this code if caused by other framework extension.
+ * If you did not receive a copy of the license, please send an email to 
+ * contact@wdca.ca or call 1-888-699-WDCA(9322), so we can send you a copy 
+ * immediately.
+ * 
+ * @category   [TBT]
+ * @package    [TBT_Rewards]
+ * @copyright  Copyright (c) 2009 Web Development Canada (http://www.wdca.ca)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+
+    <rewards_customer_index>
+        <reference name="rewards.customer">
+	        <block type="rewards/customer_transfers_spendings" name="customer.spendings" as="spendings" />
+	        <block type="rewards/customer_redeemcatalog" name="customer.redeemcatalog" as="redeemcatalog" 
+	                template="rewards/customer/redeemcatalog.phtml" />
+        </reference>
+    </rewards_customer_index>
+    
+    <!-- point slider -->
+    <catalog_product_view>           
+        <reference name="head">
+            <action method="addCss" ifconfig="rewards/general/layoutsactive">
+                <stylesheet>css/rewards/slider.css</stylesheet>                     
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/rewards/util.js</script>                            
+            </action>
+           <action method="addJs" ifconfig="rewards/general/layoutsactive">     
+                <script>tbt/rewards/catalog/product/view/redeemer.js</script>       
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/scriptaculous/SmoothSlider.js</script>                  
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/rewards/points/RedemptionSlider.js</script>                 
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/rewards/catalog/product/view/PointsSlider.js</script>   
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="js_points_captions" template="rewards/js/captions.phtml" />
+            <block type="core/template" name="js_points_redemption_validation" template="rewards/product/view/validationjs.phtml" />
+        </reference>
+    </catalog_product_view>
+    
+
+    
+    
+    <!-- @nelkaake BEGIN Points Balance in Header -->
+    <default>
+        <reference name="header">
+            <block type="core/template" name="cart_points_js" template="rewards/checkout/js.phtml" />
+        </reference>
+        <reference name="top.links">
+            <block type="core/template" name="cart_points_js" template="rewards/checkout/js.phtml" />
+        </reference>
+    </default>
+    <!-- @nelkaake END Points Balance in Header -->
+    
+    
+    <!-- @nelkaake BEGIN Points Amount in Product Info Page for Product Points -->
+    <catalog_product_view>           
+        <reference name="rewards.integrated.product.view.points">
+	        <block type="rewards/product_view_points_redeemed" name="rewards.product.view.points.redeemed" as="points_redeemed" 
+	            template="rewards/product/view/points_redeemed.phtml" >
+	            <block type="rewards/points_slider" name="rewards.product.view.points.slider" as="points_slider" 
+	                template="rewards/product/view/slider.phtml" />
+	            <block type="rewards/points_slider" name="rewards.product.view.points.slider.js" as="points_slider_js" 
+	                template="rewards/product/view/slider_js.phtml" />
+	        </block>
+        </reference>
+        <reference name="rewards.product.view.points">
+	        <block type="rewards/product_view_points_redeemed" name="rewards.product.view.points.redeemed" as="points_redeemed" 
+	            template="rewards/product/view/points_redeemed.phtml" >
+	            <block type="rewards/points_slider" name="rewards.product.view.points.slider" as="points_slider" 
+	                template="rewards/product/view/slider.phtml" />
+	            <block type="rewards/points_slider" name="rewards.product.view.points.slider.js" as="points_slider_js" 
+	                template="rewards/product/view/slider_js.phtml" />
+	        </block>
+        </reference> 
+    </catalog_product_view>
+    <!-- @nelkaake END Points Amount in Product Info Page for Product Points -->
+    
+    
+    <!-- @nelkaake BEGIN Shopping cart autointegrated content  -->
+    <checkout_cart_index>
+        <!-- Mage_Checkout -->
+        <reference name="checkout.cart.coupon">
+            <block type="core/template" name="rewards_js_points_captions" as="rewards_cartpoints_spender_js" template="rewards/js/captions.phtml" />
+            <block type="rewards/checkout_cart" name="rewards_points_cart_minibox" as="rewards_cartpoints_spender" template="rewards/checkout/cartmini.phtml" >
+                <block type="rewards/checkout_cart_slider" name="points_cart_box.slider" as="points_slider" template="rewards/checkout/cart/slider.phtml" />
+                <block type="core/template" name="points_cart_box.js" as="minicart_js" template="rewards/checkout/minicart_js.phtml" />
+            </block>
+        </reference> 
+    </checkout_cart_index>
+    <!-- @nelkaake END Shopping cart autointegrated content -->
+
+    <checkout_cart_index>
+        <!-- Mage_Checkout -->
+        <reference name="content">
+            <reference name="checkout.cart">
+                <block type="rewards/checkout_cart" name="points_cart_minibox" as="cartpoints_spender" template="rewards/checkout/cartmini.phtml" >
+                    <block type="rewards/checkout_cart_slider" name="points_cart_box.slider" as="points_slider" template="rewards/checkout/cart/slider.phtml" />
+                    <block type="core/template" name="points_cart_box.js" as="minicart_js" template="rewards/checkout/minicart_js.phtml" />
+                </block>
+            </reference>
+        </reference> 
+        <reference name="head">
+            <action method="addCss" ifconfig="rewards/general/layoutsactive">
+                <stylesheet>css/rewards/checkout/minicart.css</stylesheet>                      
+            </action>
+            <action method="addCss" ifconfig="rewards/general/layoutsactive">
+                <stylesheet>css/rewards/slider.css</stylesheet>                     
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/scriptaculous/SmoothSlider.js</script>                  
+            </action>
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/rewards/points/RedemptionSlider.js</script>                 
+            </action>
+        </reference>
+        <reference name="checkout_cart_item_points">
+	        <block type="rewards/checkout_cart_item_points_spending" name="checkout_cart_item_points_spending" 
+	                template="rewardsspend/checkout/cart/item/points.phtml">
+	            <action method="setPriority">
+	                <value>10</value>
+	            </action>
+	        </block>
+        </reference>
+    </checkout_cart_index>    
+
+    <rewards_cart_redeem_changepointsspending>
+        <reference name="root">
+            <action method="setTemplate">
+                <template></template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="checkout/cart_totals" name="checkout.cart.totals" template="checkout/cart/totals.phtml"/>
+            <block type="checkout/cart" name="checkout.cart" template="rewards/checkout/cart/methods.phtml">
+                <block type="core/text_list" name="checkout.cart.top_methods" as="top_methods" translate="label">
+                    <label>Payment Methods Before Checkout Button</label>
+                    <block type="checkout/onepage_link" name="checkout.cart.methods.onepage" template="checkout/onepage/link.phtml"/>
+                </block>
+                <block type="core/text_list" name="checkout.cart.methods" as="methods" translate="label">
+                    <label>Payment Methods After Checkout Button</label>
+                    <block type="checkout/onepage_link" name="checkout.cart.methods.onepage" template="checkout/onepage/link.phtml"/>
+                    <block type="checkout/multishipping_link" name="checkout.cart.methods.multishipping" template="checkout/multishipping/link.phtml"/>
+                </block>
+                <block type="checkout/cart_shipping" name="checkout.cart.shipping" as="shipping" template="checkout/cart/shipping.phtml"/>
+            </block>
+        </reference>
+    </rewards_cart_redeem_changepointsspending>
+    
+    
+    <default>
+        <reference name="rewards_catalog_product_list_predictpoints">
+            <block type="rewards/product_list_optimizedprice" template="rewardsspend/product/list/optimizedprice.phtml" name="optimizedprice"  priority="10" />
+        </reference>
+    </default>
+    
+    
+</layout>

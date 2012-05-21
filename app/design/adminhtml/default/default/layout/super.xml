@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <superadmin_manage_account_index>
+        <reference name="content">
+            <block type="super/manage_account" name="manage_account" />
+        </reference>
+    </superadmin_manage_account_index>
+    
+</layout>

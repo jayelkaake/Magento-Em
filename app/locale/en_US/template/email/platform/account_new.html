@@ -1,0 +1,40 @@
+<!--@subject New Sweet Tooth Rewards Platform Account created for: {{var account.getEmail()}}! @-->
+<!-- 
+<pre>
+[[ help ]]
+store url : {{store url}}
+customer_name : {{var customer_name}}
+customer_email : {{var customer_email}}
+store_name : {{var store_name}}
+points_transfered : {{var points_transfered}}
+points_balance : {{var points_balance}}
+</pre>
+-->
+
+<body style="background: #F6F6F6; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; margin: 0; padding: 0;">
+<div style="background: #F6F6F6; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; margin: 0; padding: 0;">
+  <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+    <tr>
+      <td align="center" valign="top" style="padding: 20px 0 20px 0"><table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">
+          <tr>
+            <td valign="top"><a href="{{store url="index.php/admin"}}" style="color:#1E7EC8;"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Sweet Tooth" border="0"/></a></td>
+          </tr>
+          <tr>
+            <td valign="top"><h1 style="font-size: 22px; font-weight: normal; line-height: 22px; margin: 0 0 11px 0;">Hi {{var customer_name}},</h1>
+              <p style="font-size: 12px; line-height: 16px; margin: 0 0 8px 0;">Thanks for signing up with Sweet Tooth. You're only a few steps away from setting up your loyalty program! Be sure to <a href="{{store url="index.php/admin"}}">sign in to your account</a> to access everything from loyalty program administration to billing options.</p>
+              <p style="border:1px solid #E0E0E0; font-size:12px; line-height:16px; margin:0; padding:13px 18px; background:#f9f9f9;">Use the following values when prompted to log in:<br/>
+                <strong>Username</strong>: {{var account.getUsername()}}<br/>
+                <strong>Password</strong>: {{var account.getPassword()}} <br />
+                <br />
+                The E-mail on file for this account is {{var account.getEmail()}}.</p>
+              <p style="font-size: 12px; line-height: 16px; margin: 0 0 8px 0;">Follow <a href="https://support.sweettoothrewards.com/entries/21382161-sweet-tooth-account-overview">these directions</a> to get Sweet Tooth up and running in your store today - if you purchased our installation service then we'll be in touch shortly.</p>
+              <p style="font-size: 12px; line-height: 16px; margin: 0 0 8px 0;">If you have any questions please check out our <a href="https://www.sweettoothrewards.com/knowledgebase/">knowledgebase</a>, or you can let us know through our <a href="https://support.sweettoothrewards.com/home">support portal</a>. We're always listening, and we'll be happy to help you out.</p></td>
+          </tr>
+          <tr>
+            <td style="background-color: #EAEAEA; text-align: center;"><p style="font-size:12px; margin:0; text-align: center;">Thank you, <strong>Sweet Tooth Team</strong></p></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</div>
+</body>

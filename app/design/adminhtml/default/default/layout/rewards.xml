@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <default>
+        <reference name="head">
+            <action method="addCss"><name>rewards/css/skin.css</name></action>
+        </reference>
+    </default>
+    <rewardsadmin_manage_transfer_index>
+        <reference name="content">
+            <block type="rewards/manage_transfer" name="transfer" />
+        </reference>
+    </rewardsadmin_manage_transfer_index>
+    
+    <rewardsadmin_manage_transfer_distribution_index>
+        <reference name="content">
+            <block type="rewards/manage_transfer_distribution" name="distribution" />
+        </reference>
+    </rewardsadmin_manage_transfer_distribution_index>
+    <rewardsadmin_manage_transfer_redemption_index>
+        <reference name="content">
+            <block type="rewards/manage_transfer_redemption" name="redemption" />
+        </reference>
+    </rewardsadmin_manage_transfer_redemption_index>
+    <rewardsadmin_manage_transfer_other_index>
+        <reference name="content">
+            <block type="rewards/manage_transfer_other" name="other" />
+        </reference>
+    </rewardsadmin_manage_transfer_other_index>
+    
+    
+    
+    <rewardsadmin_manage_currency_index>
+        <reference name="content">
+            <block type="rewards/manage_currency" name="currency" template= "rewards/currency.phtml"/>
+        </reference>
+    </rewardsadmin_manage_currency_index>
+    
+    <rewardsadmin_manage_special_index>
+        <reference name="content">
+            <block type="rewards/manage_special" name="special" />
+        </reference>
+    </rewardsadmin_manage_special_index>
+    
+    <adminhtml_sales_order_view>
+        <reference name="left">
+            <reference name="sales_order_tabs">
+                <action method="addTab" ifconfig="rewards/general/layoutsactive">
+                    <name>points</name>
+                    <block>rewards/adminhtml_sales_order_view_tab_points</block>
+                </action>
+            </reference>
+        </reference>
+    </adminhtml_sales_order_view>
+    
+    <adminhtml_catalog_product_edit>
+        <reference name="left">
+            <reference name="product_tabs">
+                <block type="rewards/manage_catalog_product_edit_tab_main" name="tab_rewards_main" template="rewards/catalog/product/edit/tab/main.phtml">
+                    <block type="rewards/manage_catalog_product_edit_tab_distribution" name="tab_rewards_distribution"/>
+                    <block type="rewards/manage_catalog_product_edit_tab_redemption" name="tab_rewards_redemption" />
+                </block>
+                    
+                <action method="addTab" ifconfig="rewards/general/layoutsactive">
+                    <name>points</name>
+                    <block>tab_rewards_main</block>
+                </action>
+            </reference>
+        </reference>
+    </adminhtml_catalog_product_edit>
+     
+    <adminhtml_sales_order_view>
+        <reference name="order_totals">
+            <block type="rewards/sales_order_print_points" name="order_points" as="order_points" template="rewards/sales/order/print/points.phtml" >
+                <action method="setColSpan">
+                    <value>1</value>
+                </action>
+            </block>
+        </reference>       
+    </adminhtml_sales_order_view>
+    
+    <adminhtml_sales_order_print>
+        <reference name="order_totals">
+            <block type="rewards/sales_order_print_points" name="order_points" as="order_points" template="rewards/sales/order/print/points.phtml" >
+                <action method="setColSpan">
+                    <value>1</value>
+                </action>
+            </block>
+        </reference>       
+    </adminhtml_sales_order_print>
+    
+    <adminhtml_sales_order_invoice_new>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>1</value>
+                </action>
+            </block>
+        </reference>       
+    </adminhtml_sales_order_invoice_new>
+    
+    <adminhtml_sales_order_invoice_view>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>1</value>
+                </action>
+            </block>
+        </reference>       
+    </adminhtml_sales_order_invoice_view>
+    
+    
+    <adminhtml_sales_order_invoice_print>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>1</value>
+                </action>
+            </block>
+        </reference>       
+    </adminhtml_sales_order_invoice_print>
+    
+</layout>

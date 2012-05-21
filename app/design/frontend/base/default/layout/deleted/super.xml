@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<layout>
+    <default>
+
+        <reference name="head">
+			<action method="setTitle" translate="title"><title>Sweet Tooth Platform</title></action>
+			<action method="addCss"><stylesheet>css/style.css</stylesheet></action>
+		</reference>
+ 
+    </default>
+
+    <super_login_index>
+            <reference name="root">
+                <action method="setTemplate"><template>super/login.phtml</template></action>
+            </reference>
+    </super_login_index>
+    
+    <super_login_forgotpassword>
+        <reference name="root">
+            <action method="setTemplate"><template>super/forgotpassword.phtml</template></action>
+        </reference>
+    </super_login_forgotpassword>
+    
+    <super_notfound_index>
+            <reference name="root">
+                <action method="setTemplate"><template>super/notfound/page.phtml</template></action>
+            </reference>
+           <reference name="content">
+                <block type="super/notfound" name="notfound_content" template="super/notfound/content.phtml" />
+            </reference>
+    </super_notfound_index>
+		
+</layout>

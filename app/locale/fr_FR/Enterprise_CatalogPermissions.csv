@@ -1,0 +1,27 @@
+"(Allow)","(Autorise)"
+"(Config)","(Configure)"
+"(Deny)","(Refuse)"
+"<strong style=""color:red"">Warning!</strong> By default this feature restricts all categories.","<strong style=""color:red"">Attention !</strong> Par défaut, cette fonction restreint toutes les catégories.
+
+
+
+"
+"A permission with the same scope already exists.","Une permission avec la même ampleur existe déjà."
+"Add to Cart","Ajouter au caddy"
+"Allow Adding to Cart","Permettre d'ajouter au caddy"
+"Allow Browsing Category","Permettre de naviguer la catégorie"
+"Browsing Category","Naviguer la catégorie"
+"Category Permissions","Permissions de la catégorie"
+"Category Permissions Section","Section des permissions de la catégorie"
+"Customer Groups","Groupes Client"
+"Disallow Catalog Search By","Ne permet pas la recherche catalogue par"
+"Display Product Prices","Affiche les prix des produits"
+"Enable","Active"
+"Landing Page","Page d'atterrissage"
+"New Permission","Nouvelle permission"
+"No","Non"
+"No, Redirect to Landing Page","Non, redirige vers la page d'atterrissage"
+"Permission with the same scope","Permission avec la même ampleur"
+"Remove Permission","Enlève la permission"
+"Yes, for Everyone","Oui, pour tous"
+"Yes, for Specified Customer Groups","Oui, pour les groupes client spécifiés"

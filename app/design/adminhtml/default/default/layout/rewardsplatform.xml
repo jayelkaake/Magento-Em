@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>rewardsplatform/css/style.css</stylesheet></action>
+	</reference> 
+    </default>
+    
+    <rewardsplatformadmin_root_manage_account_index>
+        <reference name="content">
+            <block type="rewardsplatform/root_manage_account" name="root_manage_account" />
+        </reference>
+    </rewardsplatformadmin_root_manage_account_index>
+	
+	<rewardsplatformadmin_root_manage_account_new>
+		<reference name="content">
+			<block type="rewardsplatform/root_manage_account_edit" name="root_manage_account_edit" />
+		</reference>
+	</rewardsplatformadmin_root_manage_account_new>
+    
+    <rewardsplatformadmin_manage_dashboard_index>
+        <reference name="content">
+            <block type="rewardsplatform/manage_dashboard" name="manage_dashboard" />
+        </reference>
+    </rewardsplatformadmin_manage_dashboard_index>
+    
+    <rewardsplatformadmin_manage_story_index>
+        <reference name="content">
+            <block type="rewardsplatform/manage_story" name="manage_story" />
+        </reference>
+    </rewardsplatformadmin_manage_story_index>
+    
+    <rewardsplatformadmin_manage_channel_index>
+        <reference name="content">
+            <block type="rewardsplatform/manage_channel" name="manage_channel" />
+        </reference>
+    </rewardsplatformadmin_manage_channel_index>
+    <rewardsplatformadmin_manage_channel_account>
+       <block type="core/text_list" name="root" output="toHtml">
+           <block type="rewardsplatform/manage_channel_edit_tab_account" name="account.grid"/>
+           <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
+               <reference name="grid_serializer">
+                   <action method="initSerializerBlock">
+                       <grid_block_name>account.grid</grid_block_name>
+                       <data_callback>getSelectedAccounts</data_callback>
+                       <hidden_input_name>links[accounts]</hidden_input_name>
+                       <reload_param_name>accounts</reload_param_name>
+                   </action>
+               </reference>
+           </block>
+       </block>
+    </rewardsplatformadmin_manage_channel_account>
+    <rewardsplatformadmin_manage_channel_accountgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="rewardsplatform/manage_channel_edit_tab_account" name="account.grid"/>
+        </block>
+    </rewardsplatformadmin_manage_channel_accountgrid>
+    
+    <rewardsplatformadmin_manage_billing_index>
+        <reference name="content">
+            <block type="rewardsplatform/manage_billing" name="manage_billing" template="rewardsplatform/manage/billing.phtml" />
+        </reference>
+    </rewardsplatformadmin_manage_billing_index>
+
+    <rewardsplatformadmin_manage_billing_upgrade>
+        <reference name="head">
+            <action method="setTitle" translate="title"><title>Upgrade Subscription</title></action>
+            <action method="addItem"><type>skin_js</type><name>recurly/js/recurly.js</name></action>
+            <action method="addCss"><name>recurly/css/recurly_themes/default/recurly.css</name></action>
+            <action method="addCss"><name>recurly/css/examples.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>rewardsplatform/index.js</name></action>
+        </reference>
+        <reference name="content">
+            <block type="rewardsplatform/manage_billing_upgrade" name="manage_billing_upgrade" template="rewardsplatform/manage/billing/upgrade.phtml" />
+        </reference>
+    </rewardsplatformadmin_manage_billing_upgrade>
+
+    <rewardsplatformadmin_manage_billing_info>
+        <reference name="head">
+            <action method="setTitle" translate="title"><title>Update Billing Information</title></action>
+            <action method="addItem"><type>skin_js</type><name>recurly/js/recurly.js</name></action>
+            <action method="addCss"><name>recurly/css/recurly_themes/default/recurly.css</name></action>
+            <action method="addCss"><name>recurly/css/examples.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>rewardsplatform/index.js</name></action>
+        </reference>
+        <reference name="content">
+            <block type="rewardsplatform/manage_billing_info" name="manage_billing_info" template="rewardsplatform/manage/billing/info.phtml" />
+        </reference>
+    </rewardsplatformadmin_manage_billing_info>
+
+</layout>

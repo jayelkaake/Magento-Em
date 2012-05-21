@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category Mxperts
+ * @package Mxperts_Jquery
+ * @authors TMEDIA cross communications <info@tmedia.de>, Johannes Teitge <teitge@tmedia.de>, Igor Jankovic <jankovic@tmedia.de>, Daniel Sasse <d.sasse1984@googlemail.com>
+ * @copyright TMEDIA cross communications, Doris Teitge-Seifert
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>    
+        <Mxperts_Jquery>
+            <version>1.3.7</version>        
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mxperts_Jquery>
+    </modules>
+</config>

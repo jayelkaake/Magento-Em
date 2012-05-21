@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+    <adminhtml_customer_edit>
+        <reference name="left">
+            <reference name="customer_edit_tabs">
+                <block type="rewards/manage_customer_edit_tab_main" name="tab_points_main" template="rewards/customer/edit/tab/points.phtml">
+                    <block type="rewards/manage_customer_edit_tab_summary" name="tab_points_summary" template="rewards/customer/edit/tab/summary.phtml"/>
+                    <block type="rewards/manage_customer_edit_tab_points" name="tab_points_grid" />
+                </block>
+                    
+                <action method="addTab" ifconfig="rewards/general/layoutsactive">
+                    <name>points</name>
+                    <block>tab_points_main</block>
+                </action>
+            </reference>
+        </reference>        
+    </adminhtml_customer_edit>
+
+</layout>

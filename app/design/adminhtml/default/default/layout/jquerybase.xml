@@ -1,0 +1,10 @@
+<layout version="0.1.0">
+   
+  <default>
+    <reference name="head">
+      <action method="addJs"><name>jquery/jquery-1.4.2.min.js</name></action>
+      <action method="addJs"><name>jquery/jquery-noconflict.js</name></action>
+      <action method="addJs"><name>jquery/jquery-functionality.js</name></action>
+     </reference> 
+  </default> 
+ </layout>        

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Magento Commercial Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Commercial Edition License
+ * that is available at: http://www.magentocommerce.com/license/commercial-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_pro
+ * @copyright   Copyright (c) 2010 Magento, Inc.
+ * @license     http://www.magentocommerce.com/license/commercial-edition
+ */
+?>
+<div>
+    <h2 style="font-size:1.4em; margin:0;"><strong><?php echo $this->__('Installation') ?></strong></h2>
+    <div class="content">
+        <ol>
+        <?php foreach($this->getDownloaderSteps() as $step): ?>
+            <li><?php echo $step ?></li>
+        <?php endforeach; ?>
+        <?php if ($this->isDownloaderInstall()) : ?>
+            <li><?php echo $this->__('Channel Server Authorization')?></li>
+        <?php endif; ?>
+            <li><?php echo $this->__('Download')?></li>
+        <?php foreach($steps as $_step): ?>
+            <li <?php if($_step->getActive()): ?>style="color:#f15d22; font-weight:bold; "<?php endif ?>><?php echo $this->__($_step->getCode()) ?></li>
+        <?php endforeach ?>
+        </ol>
+        <br/>
+        <p>
+            <?php echo $this->__('Having trouble installing Magento?') ?>
+            <?php echo $this->__('Check out our') ?> <a href="http://www.magentocommerce.com/install" id="installation_guide_link"><?php echo $this->__('Installation Guide') ?></a>
+            <script type="text/javascript">
+                $('installation_guide_link').target = "installation_guide";
+            </script>
+        </p>
+    </div>
+</div>

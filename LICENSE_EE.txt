@@ -1,0 +1,222 @@
+VARIEN MAGENTO™ ENTERPRISE EDITION
+
+END USER LICENSE AGREEMENT ("AGREEMENT")
+
+PLEASE READ THE FOLLOWING TERMS AND CONDITIONS CAREFULLY BEFORE DOWNLOADING, INSTALLING OR USING THE SOFTWARE.
+
+By downloading or using the Software you agree to this Agreement on your behalf as an individual, and on behalf of your employer or another 
+entity with which you are associated, if such employer or entity has not previously accepted these terms (you and such employer or other entity, 
+collectively, the "Licensee") and agree to be bound by its terms and conditions; and b) you are accepting electronic delivery of the Software.  
+If the Licensee has not previously accepted these terms, you represent and warrant that you have full legal authority to bind the Licensee to 
+these terms and conditions and if you do not have such legal authority, please do not check the "I agree to the above terms and conditions" 
+checkbox below.  This Agreement, effective as of the date you check the "I agree to the above terms and conditions" checkbox and click Continue 
+(the "Effective Date") is a legal agreement between Licensee and Irubin Consulting Inc., d/b/a Varien ("Varien"), a California corporation having 
+its principal place of business at 11832 West Pico Boulevard, Los Angeles, California 90064 U.S.
+
+ 
+
+Except for a signed license agreement to use the Software: (i) This Agreement constitutes the entire agreement concerning Licensee's use of the 
+Software; (ii) No purchase order, other ordering document or any hand written or typewritten text which purports to modify or supplement the 
+printed text of this Agreement shall vary the terms hereof; (iii)  All such proposed variations are objected to and shall have no force or 
+effect; and (iv) This Agreement replaces and supersedes any prior verbal understandings, written communications and representations.
+
+   1.   License
+         1. Subject to Licensee’s compliance with the terms and conditions of this Agreement and any applicable payment terms, Varien grants 
+         Licensee a non-transferable, non-assignable, non-sublicensable, worldwide license solely during the Term to use, modify and create 
+         derivative works in respect of the Software, solely for internal purposes, in accordance with the Software's technical documentation. 
+         Such license is limited to the maximum number of designated servers as approved in writing by Varien ("Designated Server") . 
+      
+         2. In the event that Licensee's actual number of Servers of a particular Software license exceeds the licensed number of Designated 
+         Servers on such license, Licensee shall promptly provide Varien with written notice and pay Varien the fees required to license such 
+         additional Server(s) in accordance with the commercial terms set out in any applicable order form of Varien or a Varien-authorized 
+         reseller ("Magento Order Form").
+         
+         3. Licensee shall implement reasonable controls to ensure that it does not exceed the maximum number of licensed Servers of the 
+         Software.  Varien reserves the right to audit Licensee's use of the Software during normal business hours and with reasonable notice and 
+         to include means within the Software to limit Licensee's use of the Software to the licensed number of Servers.
+         
+         4. Varien shall provide to Licensee an initial copy of the Software, including the associated technical documentation, for use by 
+         Licensee in accordance with this Agreement.  Subject to Sections 1.1-1.3 above, Licensee is authorized to make a reasonable number of 
+         copies of the Software as it requires for purpose of exercising its rights under this Agreement.
+         
+         5. Licensee is authorized to use the Software on a single substitute or backup Server on a temporary basis without charge any time a 
+         Designated Server is inoperative due to a malfunction beyond the control of Licensee.  Licensee may transfer the Software on a permanent
+         basis to a single replacement Server without charge.  Licensee agrees to provide Varien with written notice, including the Server type 
+         and operating system, of any such transfer to a backup or replacement Server within five (5) days after such transfer.
+         
+         6. Licensee acknowledges that portions of the Software are also freely available to the public under Varien's open source version of the 
+         Software, subject to certain conditions, with limited warranties and other limited assurances, and without service or support. As an 
+         express condition for the license granted hereunder, Licensee agrees that any use of such open source versions of the Software, whether 
+         used on a Production Service Instance or Non-Production Server Instance, shall be deemed use of the Software for purposes of the 
+         calculation of fees payable under the Agreement.
+
+   2. License Exclusions
+         1. Except as expressly authorized herein, Licensee shall not:
+
+               1. use or deploy the Software on any Server in excess of the number of Designated Servers;
+   
+               2. distribute, sublicense, disclose, market, rent, lease, remote computing services, networking, batch processing or transfer to 
+               any third party the Software or permit any person or entity to have access to the Software by means of a time sharing, remote 
+               computing services, networking, batch processing, service bureau or time sharing arrangement;
+   
+               3. export the Software in violation of U.S. Department of Commerce export administration regulations.
+   
+         2. No license, right or interest in any Varien trademark, trade name or service mark is granted hereunder.
+
+   3. Fees and Payment Terms
+
+         Licensee shall pay Varien or its authorized reseller the fees specified by Varien. All fees due to Varien shall be due and payable 
+         within fourteen (14) days of the date of invoice and overdue payments shall bear interest at the lesser of one and one-half percent 
+         (1.5%) per month or the maximum rate allowed under applicable law.  Licensee is responsible for all taxes concerning the Software and/or 
+         services, excluding taxes based on Varien's or authorized reseller's income. 
+
+   4. Title and Protection
+         1. Varien (or its third party providers) retains title to all portions of the Proprietary Material and any copies thereof.  Licensee 
+         agrees to maintain strict controls to ensure that such materials are treated confidentially and safeguarded with at least the same 
+         degree of care that it takes to protect its own information of a similar nature, which in no event shall be less than a reasonable 
+         degree of care, and shall not disclose the Proprietary Material to anyone other than those of its employees or consultants under 
+         nondisclosure obligations, having a need to know for purposes consistent with this Agreement.  Licensee shall affix, to each full or 
+         partial copy of the Proprietary Materials or any portion thereof made by Licensee, all copyright and proprietary information notices as 
+         were affixed to the original.  The obligations set forth in this Section shall survive termination of this Agreement.
+         
+         2. Licensee acknowledges that the Software includes certain open source and other third-party software which is governed by the 
+         applicable license terms thereof. A list of such software, as amended from time to time, including the links applicable to related 
+         license terms and conditions thereof is specified in the product release notes for each Software version. The use of such software 
+         bundled within the Software is subject to the provisions of such license agreements, and in the event of any contradiction between the 
+         provisions of this Agreement and the provisions of such applicable license agreement, the provisions of the applicable license agreement 
+         shall prevail solely with respect to such software products. Varien makes no indemnity with respect to any open source or third-party 
+         software included within the Software, and for greater clarity, the indemnity set out in Section 5 (Patent and Copyright Indemnity) 
+         below does not apply to any such software.
+         
+         3. If the Software is acquired by or on behalf of a unit or agency of the U.S. Government (the “Government”), the Government agrees that 
+         such product is “commercial computer software” or “commercial computer software documentation” and that, absent a written agreement to 
+         the contrary, the Government’s rights with respect to such product are limited by the terms of this Agreement, pursuant to applicable 
+         FAR and/or DFARS and successor regulations.
+         
+   5. Patent and Copyright Indemnity
+
+         Varien shall indemnify and defend Licensee against any claims that the Software infringes any United States patent or United States 
+         copyright; provided that Varien is given prompt notice of such claim and is given information, reasonable assistance and sole authority 
+         to defend or settle the claim.  In the defense or settlement of the claim, Varien shall obtain for Licensee the right to continue using 
+         the Software, replace or modify the Software so that it becomes non-infringing while giving equivalent performance or, if Varien 
+         determines that such remedies are not reasonably available, remove the infringing portion of the Software, accept its return and refund 
+         the prorated portion of any prepaid but unused fees for the use or support of such Software license.  Varien shall have no liability if 
+         the alleged infringement is based on a modification of the Software by anyone other than Varien; is based on use of the Software with 
+         one or more Servers not listed in a Magento Order Form; or is based on the use of the Software other than in accordance with the 
+         documentation.  This Section 5 states Varien's entire liability and Licensee's exclusive remedy for infringement.
+         
+   6. Default and Termination
+         1. An event of default shall be deemed to occur if: (i) Licensee fails to perform any of its obligations under the Sections entitled 
+         "License Exclusions" or "Title and Protection"; or (ii) either party fails to perform any other material obligation under this Agreement 
+         and such failure remains uncured for more than thirty (30) days after receipt of written notice thereof.
+         
+         2. If an event of default occurs, the non-defaulting party, in addition to any other rights available to it under the law, may terminate 
+         this Agreement and all licenses granted hereunder by written notice to the defaulting party.  Remedies shall be cumulative and there 
+         shall be no obligation to exercise a particular remedy.
+         
+         3. Within thirty (30) days after termination of the Software license or expiration of the Term, Licensee shall certify in writing to 
+         Varien that Licensee has ceased use of the Software and that all copies of the Software in any form, including partial copies within 
+         modified versions, have been destroyed.
+         
+   7. Warranty
+         1. Warranty for Software.  Varien warrants for a single period of ninety (90) days commencing upon Varien’s electronic delivery of the 
+         Software to Licensee that the Software will perform the functions described in the specifications contained in the documentation 
+         provided with the Software.  Varien or its authorized reseller will undertake reasonable efforts to correct any reported error in 
+         accordance with any terms and conditions of support purchased by Licensee from Varien.  Varien does not warrant that the Software will 
+         meet Licensee’s requirements, that the Software will operate in the combinations which Licensee may select for use, that the operation 
+         of the Software will be uninterrupted or error-free, or that all error conditions will be corrected.  EXCEPT AS PROVIDED IN THIS SECTION 
+         ALL SOFTWARE PROVIDED HEREUNDER IS PROVIDED “AS IS”.
+         
+         2. Anti-Virus Precautions.  Varien represents that as of the date of delivery to Licensee of the Software Varien used reasonable, 
+         commercially available anti-virus software to prevent the Software from containing any malicious code, commands, instructions, programs, 
+         or other internal components (e.g., a computer “virus,” computer “worm,” computer "time bomb," “Trojan horse,” “back door,” or malware) 
+         or any blended or convergent combination thereof.
+         
+         3. DISCLAIMER.  THE EXPRESS WARRANTIES SET FORTH IN THIS SECTION 7 ARE THE ONLY WARRANTIES MADE BY VARIEN WITH RESPECT TO THE SOFTWARE 
+         PROVIDED BY VARIEN.  VARIEN MAKES NO OTHER WARRANTIES, EXPRESS, IMPLIED OR ARISING BY CUSTOM OR TRADE USAGE, AND, SPECIFICALLY, MAKES NO 
+         WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.  VARIEN'S EXPRESS WARRANTIES SHALL NOT BE ENLARGED, DIMINISHED OR 
+         AFFECTED BY, AND NO OBLIGATION OR LIABILITY SHALL ARISE OUT OF, VARIEN RENDERING TECHNICAL OR OTHER ADVICE OR SERVICE IN CONNECTION WITH 
+         THE SOFTWARE.
+         
+   8. Limitation of Liability
+         1. LIABILITY EXCLUSIONS. NOTHING IN THIS AGREEMENT SHALL EXCLUDE OR LIMIT EITHER PARTY’S LIABILITY FOR (i) THE TORT OF FRAUD OR DECEIT 
+         (ii) DEATH OR PERSONAL INJURY CAUSED BY SUCH PARTY’S NEGLIGENCE OR (iii) ANY OTHER LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED BY 
+         APPLICABLE LAW.  SAVE FOR THE FOREGOING, NEITHER PARTY ACCEPTS AND HEREBY EXCLUDES ANY LIABILITY FOR LOSS OF OR DAMAGE TO LICENSEE’S 
+         TANGIBLE PROPERTY OTHER THAN THAT CAUSED BY ITS NEGLIGENCE AND HEREBY EXCLUDES ANY OTHER LIABILITY FOR NEGLIGENCE ARISING PURSUANT TO 
+         THE TERMS OF THIS AGREEMENT. UNDER NO CIRCUMSTANCES WILL EITHER PARTY BE LIABLE FOR: LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED 
+         PROFITS; LOSS OF CONTRACTS; LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF 
+         GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO OR CORRUPTION OF DATA; OR CONSEQUENTIAL OR INDIRECT LOSS OR SPECIAL, PUNITIVE, OR 
+         INCIDENTAL DAMAGES (INCLUDING, FOR THE AVOIDANCE OF DOUBT, WHERE SUCH LOSS OR DAMAGE IS ALSO OF A CATEGORY OF LOSS OR DAMAGE ALREADY 
+         LISTED) WHETHER FORESEEABLE OR UNFORESEEABLE, BASED ON CLAIMS OF LICENSEE OR ANY OTHER PARTY ARISING OUT OF ANY BREACH OR FAILURE OF 
+         EXPRESS OR IMPLIED WARRANTY CONDITIONS OR OTHER TERM, BREACH OF CONTRACT, MISREPRESENTATION, NEGLIGENCE, OTHER LIABILITY IN TORT, 
+         FAILURE OF ANY REMEDY TO ACHIEVE ITS ESSENTIAL PURPOSE, OR OTHERWISE.
+
+         2. LIABILITY CAP.  NOTWITHSTANDING THE FORM (E.G., CONTRACT, TORT, OR OTHERWISE) IN WHICH ANY LEGAL OR EQUITABLE ACTION MAY BE BROUGHT, 
+         IN NO EVENT WILL VARIEN OR ITS SUPPLIERS BE LIABLE FOR DAMAGES, RESTITUTION OR LOSSES, THAT EXCEED, IN THE AGGREGATE, FOR EACH 
+         RESPECTIVE BREACH OR SERIES OF RELATED BREACHES, THE AMOUNT OF FEES RECEIVED BY VARIEN FOR THE SOFTWARE LICENSE IN THE TWELVE (12) MONTH 
+         PERIOD PRIOR TO THE DATE ON WHICH THE EVENT GIVING RISE TO SUCH DAMAGES OR LOSSES OCCURRED.              
+         
+   2. Support Services Terms and Conditions
+
+         Varien will provide support services and Updates for the Software and any Varien Modifications in accordance with the terms and 
+         conditions of support purchased by Licensee.
+
+  10. Notices
+
+         All notices shall be in writing and sent by first class mail or overnight mail (or courier), or transmitted by facsimile (if confirmed 
+         by such mailing), to the addresses indicated on the first page of this Agreement, or such other address as either party may indicate by 
+         at least ten (10) days prior written notice to the other party.  Notices to Varien shall be sent to the Contracts Administration 
+         Department.
+
+  11. Assignment
+
+         Licensee may not assign this Agreement without the prior written consent of Varien; provided that such consent shall not be required for 
+         assignment to a purchaser of all or substantially all of the assets or equity securities of Licensee.  Any prohibited assignment shall 
+         be null and void.
+
+  12. General
+
+         This Agreement is made in and shall be governed by the laws of the State of California, excluding choice of law principles.  All 
+         proceedings shall be conducted in English.  Venue for all proceedings shall be Los Angeles County, California.  The United Nations 
+         Convention for the International Sale of Goods shall not apply.  The section headings herein are provided for convenience only and have 
+         no substantive effect on the construction of this Agreement.  Except for Licensee's obligation to pay Varien, neither party shall be 
+         liable for any failure to perform due to causes beyond its reasonable control.  If any provision of this Agreement is held to be 
+         unenforceable, this Agreement shall be construed without such provision.  The failure by a party to exercise any right hereunder shall 
+         not operate as a waiver of such party's right to exercise such right or any other right in the future.  This Agreement may be amended 
+         only by a written document executed by a duly authorized representative of each of the parties.  This Agreement may be executed in 
+         counterparts. 
+
+  13. Definitions
+
+         "Designated Server" shall mean the Server specified in a Magento Order Form with respect to a particular Software license.
+
+         "Modifications" means any code developed by Licensee or any third party, including without limitation, configuration, integrations, 
+         implementations, or localizations to the external layer of the core, baseline Software product.  The term "Modifications" excludes 
+         Updates provided by Varien as part of Support Services.
+
+         "Proprietary Material" means the Software, related documentation, and all parts, copies and modifications thereof, and any other 
+         information, in whatever form, received by Licensee hereunder from Varien or its licensors, provided, however, such information shall 
+         not be deemed Proprietary Material if it (a) is or becomes a part of the public domain through no act or omission of Licensee; or (b) 
+         was in Licensee's lawful possession prior to the disclosure and had not been obtained by Licensee from Varien; or (c) is lawfully 
+         disclosed to Licensee by a third party without restriction on disclosure; or (d) is independently developed by Licensee without 
+         reference to or use of the Proprietary Material.
+
+         "Server" means any physical or virtual server from which a single instance of the Software is accessed and used either for production 
+         purposes ("Production Server Instance") or for non-production purposes, such as development, test, training and other non-operational 
+         business transactions ("Non-Production Server Instance").  For the avoidance of doubt, if one physical or virtual server contains two 
+         (2) instances of the Software, e.g., one Production Server Instance and one Non-Production Server Instance, then a Server license is 
+         required for each of such instances.
+
+         "Software" means Varien's proprietary e-commerce software solution known as the Magento™ Enterprise Edition, provided solely in source 
+         code, including associated technical documentation, and all Updates thereof furnished to Licensee as part of Support Services.  Except 
+         as otherwise specified herein, the term Software includes certain open source software programs described in Section 4.2.  "Software” 
+         does not include any Modifications.
+
+         “Term” means the period commencing upon Varien’s electronic delivery of the Software to Licensee and expiring on the date set out in a 
+         Magento Order Form, unless extended by the mutual written consent of both parties.
+
+         "Updates" means all published revisions and corrections to the printed documentation and corrections and new releases of the Software 
+         which are generally made available to Varien's supported customers at no additional cost or for media and handling charges only.  
+         Updates shall not include any options or future products which Varien sells separately.
+
+LAST UPDATED:  2009-06-25

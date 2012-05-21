@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WDCA - Sweet Tooth
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the WDCA SWEET TOOTH POINTS AND REWARDS 
+ * License, which extends the Open Software License (OSL 3.0).
+ * The Sweet Tooth License is available at this URL: 
+ *      http://www.wdca.ca/solutions_page_sweettooth/Sweet_Tooth_License.php
+ * The Open Software License is available at this URL: 
+ *      http://opensource.org/licenses/osl-3.0.php
+ * 
+ * DISCLAIMER
+ * 
+ * By adding to, editing, or in any way modifying this code, WDCA is 
+ * not held liable for any inconsistencies or abnormalities in the 
+ * behaviour of this code. 
+ * By adding to, editing, or in any way modifying this code, the Licensee
+ * terminates any agreement of support offered by WDCA, outlined in the 
+ * provided Sweet Tooth License. 
+ * Upon discovery of modified code in the process of support, the Licensee 
+ * is still held accountable for any and all billable time WDCA spent 
+ * during the support process.
+ * WDCA does not guarantee compatibility with any other framework extension. 
+ * WDCA is not responsbile for any inconsistencies or abnormalities in the
+ * behaviour of this code if caused by other framework extension.
+ * If you did not receive a copy of the license, please send an email to 
+ * contact@wdca.ca or call 1-888-699-WDCA(9322), so we can send you a copy 
+ * immediately.
+ * 
+ * @category   [TBT]
+ * @package    [TBT_Rewards]
+ * @copyright  Copyright (c) 2009 Web Development Canada (http://www.wdca.ca)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+
+
+    
+    <!-- @nelkaake AUTOINTEGRATED BEGIN -->
+    
+    <!-- @nelkaake BEGIN Points Amount in Product Info page for Reviews  -->
+    <catalog_product_view>           
+        <reference name="alert.urls">
+            <block type="rewards/integrated_special_review" name="rewards.special.product_info.review" as="rewards_review" 
+                template="rewards/special/review.phtml"/>
+        </reference>   
+        <reference name="product.info">
+            <block type="rewards/special_review" name="rewards.special.review" as="rewardsReview" 
+                template="rewards/special/review.phtml"/>
+        </reference>
+    </catalog_product_view>
+    <!-- @nelkaake END Points Amount in Product Info Page for Product Points -->
+    
+    
+    <!-- @nelkaake BEGIN Points Amount in Review Listing Page -->
+    <review_product_list>
+        <reference name="product.review.form.fields.before">
+            <block type="rewards/integrated_special_review_form" name="rewards_review_points" 
+                    as="rewards_review_points" template="rewards/special/reviewform.phtml" />
+        </reference>
+    </review_product_list>
+    <!-- @nelkaake END Points Amount in Review Listing Page -->
+    
+    <!-- @nelkaake BEGIN Points Amount in Product Info Page for Product Points -->
+    <catalog_product_view>           
+        <reference name="product.info.extrahint">
+            <block type="rewards/integrated_product_view_points" name="rewards.integrated.product.view.points" as="rewards_points" 
+                   template="rewards/product/view/points.phtml" >
+                <block type="rewards/product_view_points_earned" name="rewards.product.view.points.earned" as="points_earned" 
+                    template="rewards/product/view/points_earned.phtml" />
+            </block>
+        </reference>
+        <reference name="product.info">
+            <block type="rewards/product_view_points" name="rewards.product.view.points" as="points" 
+                   template="rewards/product/view/points.phtml" >
+                <block type="rewards/product_view_points_earned" name="rewards.product.view.points.earned" as="points_earned" 
+                    template="rewards/product/view/points_earned.phtml" />
+            </block>
+        </reference> 
+    </catalog_product_view>
+    <!-- @nelkaake END Points Amount in Product Info Page for Product Points -->
+    
+    
+    <catalog_product_view>
+        <reference name="product.info.additional">
+            <block type="rewards/integrated_special_tag" name="rewards_tag_points" as="rewards_tag_points" 
+                    template="rewards/special/tag.phtml"  after="product_tag_list" />
+        </reference>
+    </catalog_product_view>
+    <!-- @nelkaake AUTOINTEGRATED END -->
+    <default>
+        <reference name="head">
+            <action method="addCss" ifconfig="rewards/general/layoutsactive">
+                <stylesheet>css/rewards/skin.css</stylesheet>
+            </action>
+            <action method="addCss" ifconfig="rewards/general/layoutsactive">
+                <stylesheet>css/rewards/catalog.css</stylesheet>                        
+            </action>
+        </reference>
+    </default>
+    <checkout_cart_index>
+        <!-- Mage_Checkout -->
+        <reference name="content">
+            <block type="core/template" name="js_points_captions" template="rewards/js/captions.phtml" />
+        </reference> 
+        <reference name="head">
+            <action method="addJs" ifconfig="rewards/general/layoutsactive">        
+                <script>tbt/rewards/util.js</script>                            
+            </action>
+        </reference>
+        <!-- these template rewrites are still required until we don't support 1.4.1 anymore -->
+        <reference name="checkout.cart">
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>default</type>
+                <block>rewards/checkout_cart_item_renderer</block>
+                <template>rewards/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>simple</type>
+                <block>rewards/checkout_cart_item_renderer</block>
+                <template>rewards/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>grouped</type>
+                <block>rewards/checkout_cart_item_renderer_grouped</block>
+                <template>rewards/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>configurable</type>
+                <block>rewards/checkout_cart_item_renderer_configurable</block>
+                <template>rewards/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>bundle</type>
+                <block>rewards/checkout_cart_item_renderer_bundle</block>
+                <template>rewards/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender" ifconfig="rewards/general/layoutsactive">
+                <type>downloadable</type>
+                <block>rewards/checkout_cart_item_renderer_downloadable</block>
+                <template>rewards/checkout/cart/item/downloadable.phtml</template>
+            </action>
+        </reference>
+        <reference name="additional.product.info">
+            <block type="rewards/checkout_cart_item_points" name="checkout_cart_item_points" 
+                    template="rewards/checkout/cart/item/points.phtml" >
+	            <block type="rewards/checkout_cart_item_points_earning" name="checkout_cart_item_points_earning" 
+	                    template="rewards/checkout/cart/item/points/earning.phtml">
+	                <action method="setPriority">
+	                    <value>20</value>
+	                </action>
+                </block>
+            </block>
+        </reference>
+    </checkout_cart_index>
+    
+    
+    <!-- Displays a warning if the csutomer is using the multishipping interface since multishipping points earning/spending are not currently supported. -->
+    <checkout_multishipping>
+        <reference name="content">
+            <block type="core/template" name="points_mulltiship_warning" template="rewards/checkout/multishipping/warning.phtml"/>
+        </reference>
+    </checkout_multishipping>
+    
+
+    <!--
+    In Magento 1.3.x and lower...
+    //@nelkaake -a 14/12/10: 
+    -->
+    <sales_order_print> 
+        <reference name="sales.order.print" >
+            <block type="rewards/sales_order_view_points" name="order_points" template="rewards/sales/order/print/points.phtml" >
+                <action method="setIsPlaneMode">
+                    <value>1</value>
+                </action>
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+            </block>
+        </reference>
+    </sales_order_print>
+    <sales_order_view>
+        <reference name="order_items">
+            <block type="rewards/sales_order_view_points" name="order_points" template="rewards/sales/order/view/points.phtml" >
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+             </block>
+        </reference>
+    </sales_order_view>
+    <!-- END    -->
+    
+    <!--
+    In Magento 1.4 and up, the order totals block needs to have this code as well as some modified 
+    code in app\code\community\TBT\Rewards\Block\Sales\Order\Points.php
+    @nelkaake Added on Thursday August 19, 2010: 
+    -->
+    <sales_order_print>
+        <reference name="order_totals">
+            <block type="rewards/sales_order_print_points" name="order_points" template="rewards/sales/order/print/points.phtml" >
+                <action method="setIsPlaneMode">
+                    <value>1</value>
+                </action>
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+            </block>
+        </reference>       
+    </sales_order_print>    
+    <sales_order_view>
+        <reference name="order_totals">
+            <block type="rewards/sales_order_print_points" name="order_points" template="rewards/sales/order/view/points.phtml" >
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+            </block>
+        </reference>       
+    </sales_order_view>
+    <!-- END    -->
+    
+    <sales_email_order_items>
+        <reference name="order_totals">
+            <block type="rewards/sales_order_print_points" name="order_points" template="rewards/sales/order/print/points.phtml" >
+                <action method="setIsPlaneMode">
+                    <value>1</value>
+                </action>
+                <action method="setColSpan">
+                    <value>3</value>
+                </action>
+                <action method="setLabelProperties"><value>colspan="3" align="right" style="padding:3px 9px"</value></action>
+                <action method="setValueProperties"><value>align="right" style="padding:3px 9px"</value></action>
+            </block>
+        </reference>
+    </sales_email_order_items>
+    
+    <sales_order_invoice>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+            </block>
+        </reference>
+    </sales_order_invoice>
+    
+    <sales_order_printinvoice>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>4</value>
+                </action>
+            </block>
+        </reference>       
+    </sales_order_printinvoice>
+    
+    <sales_email_order_invoice_items>
+        <reference name="invoice_totals">
+            <block type="rewards/sales_order_invoice_points" name="invoice_points_discount" as="invoice_points_discount" 
+                    template="rewards/sales/order/invoice/points.phtml" >
+                <action method="setColSpan">
+                    <value>3</value>
+                </action>
+                <action method="setLabelProperties"><value>colspan="3" align="right" style="padding:3px 9px"</value></action>
+                <action method="setValueProperties"><value>align="right" style="padding:3px 9px"</value></action>
+            </block>
+        </reference>       
+    </sales_email_order_invoice_items>
+    
+    
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.login.before">
+            <block type="rewards/integrated_checkout_onepage_warnguest" 
+                name="rewards.checkout.onepage.warnguest" 
+                as="rewards_checkout_onepage_warnguest" 
+                template="rewards/checkout/onepage/warnguest.phtml" ></block>
+        </reference>
+    </checkout_onepage_index>
+    
+    <default>
+        <reference name="rewards_catalog_product_list_predictpoints">
+            <block type="rewards/product_list_earning" template="rewards/product/list/earning.phtml" name="rewards_catalog_product_list_predictpoints.earning"  priority="20" />
+        </reference>
+    </default>
+    
+</layout>

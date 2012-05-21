@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<layout>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="customer" 
+                    ifconfig="rewards/referral/referral_show">
+                <name>rewardsref_referral</name>
+                <path>rewardsref/customer/index/</path>
+                <label>My Referrals</label>
+            </action>
+        </reference>
+    </customer_account>
+
+
+    <rewardsref_customer_contacts>
+        <reference name="contacts">
+            <block type="rewardsref/customer/referral_contacts" name="plaxo" template="rewardsref/customer/referral/plaxo.phtml" />
+       </reference>
+   </rewardsref_customer_contacts>
+
+    <rewardsref_customer_index>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="addCss" ifconfig="rewards/referral/referral_show">
+                <stylesheet>css/rewardsref/my_referrals.css</stylesheet>						
+            </action>
+            <action method="addJs" ifconfig="rewards/referral/referral_show">
+                <script>tbt/rewardsref/plaxo.js</script>                        
+            </action>
+            <action method="addCss" ifconfig="rewards/referral/referral_show">
+                <stylesheet>css/rewardsref/plaxo.css</stylesheet>                        
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="rewardsref/customer_referral" name="referral" template="rewardsref/customer/referral.phtml" >
+                <block type="rewardsref/customer_referral_abstract" name="preferences" template="rewardsref/customer/referral/preferences.phtml" />
+                <block type="rewardsref/customer_referral_history" name="history" template="rewardsref/customer/referral/history.phtml" />
+                <block type="core/text_list" name="refer_form" as="refer_form">
+	                <block type="rewardsref/customer_referral_abstract" name="refer_form_multi" template="rewardsref/customer/referral/invite/plaxo/referral_form.phtml">
+	                    <block type="rewardsref/customer_referral_abstract" name="plaxo_contact_chooser" template="rewardsref/customer/referral/invite/plaxo/plaxo_contact_chooser.phtml" />
+	                </block>
+                    <!-- block type="rewardsref/customer_referral_abstract" name="refer_form_single" template="rewardsref/customer/referral/invite/single_invite_form.phtml" /-->
+                </block>
+                <block type="rewardsref/customer_referral_abstract" name="affiliate" template="rewardsref/customer/referral/affiliate.phtml" />
+                
+                 
+            </block>
+            <block type="customer/account_dashboard" name="customer.account.link.back" template="customer/account/link/back.phtml"/>
+        </reference>            
+    </rewardsref_customer_index>
+    
+    
+    <customer_account_create>
+        <reference name="customer_form_register">
+            <block type="rewardsref/field_register" name="rewards_referral" template="rewardsref/customer/register/fieldset.phtml" />
+        </reference>
+    </customer_account_create>
+    
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.billing">
+            <block type="rewardsref/field_checkout" name="rewards_referral_field" template="rewardsref/onepage/field.phtml" />
+        </reference>
+    </checkout_onepage_index>
+    
+</layout>

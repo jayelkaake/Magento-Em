@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout>
+                                   
+    <catalogsearch_result_index>
+        <reference name="search.result">
+            <block type="bss/dym" name="bss_dym" as="bss_dym" template="bss/dym.phtml" />
+        </reference>
+        <reference name="head">
+			<action method="addCss">
+                <stylesheet>css/bss/dym.css</stylesheet>						
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="bss/catalogSearch_profiler" name="bss_catalogsearch_profiler">
+            </block>
+        </reference>
+    </catalogsearch_result_index>
+                          
+    <bss_dym_suggest>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="bss/dym_results" name="root" output="toHtml" template="bss/dym/results.phtml"> </block>
+    </bss_dym_suggest>         
+              
+                                   
+</layout>

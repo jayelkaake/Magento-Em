@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>recurly/css/styles.css</stylesheet></action>
+        </reference>
+    </default>
+
+</layout>

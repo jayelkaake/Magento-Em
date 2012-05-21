@@ -1,0 +1,22 @@
+Rewards Platform is the module run on the Sweet Tooth engine in our production SaaS offering of the Sweet Tooth engine.
+
+INSTALL
+=======
+
+1. Install magento enterprise
+1.1. git clone git@wdca.unfuddle.com:wdca/enterprise-sampledata.git
+1.2. git clone git@wdca.unfuddle.com:wdca/me11110.git
+1.3. Create me11110 database and import enterprise-sampledata/enterprise-sampledata.php.sql
+1.4. Run the magento installer.
+
+2. Run dev/shell/install.sh
+
+3. Install dependent modules - all have dev/shell/install.sh
+3.1. git clone git@wdca.unfuddle.com:wdca/mmst.git
+3.1.1. git checkout rewardsplatform
+3.2. git clone git@wdca.unfuddle.com:wdca/rewardsloyalty.git
+3.3. git clone git@wdca.unfuddle.com:wdca/tbtcommon.git
+3.4. git clone git@wdca.unfuddle.com:wdca/recurly.git
+
+4. Note: For a production environment, disable symlinks, which are being enabled in the upgrade script.
+

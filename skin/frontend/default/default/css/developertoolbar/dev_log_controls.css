@@ -1,0 +1,41 @@
+
+.log-tool-tip {
+    z-index:9999; 
+    width:95%; 
+    /* opacity:0.93; */
+}
+.log-tool-tip .btn-close{
+    background-color:#7BA7C9;
+}
+.log-tool-tip .block-content-container{
+    text-align: left;
+    max-height:600px;
+    overflow-x:auto;
+    overflow-y:auto;
+    width:100%;
+}
+.log-tool-tip .log-tool-tip-header{
+    float: left; 
+    margin-left: 12px; 
+    font-weight: bold; 
+    font-size: 16px; 
+    color: rgb(255, 255, 255); 
+    padding-bottom: 6px;
+}
+
+.log-tool-tip .block-content-container .tip-loading-msg {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px; 
+}
+
+.developertoolbar input {
+    background-color: rgb(187, 187, 187);
+}
+
+.developertoolbar input#max_lines {
+    width: 39px; 
+}
+.developertoolbar input#max_entries {
+    width: 30px; 
+}
